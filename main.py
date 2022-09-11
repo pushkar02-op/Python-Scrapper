@@ -18,7 +18,6 @@ df = pd.DataFrame(
 
 def extract_data(name_to_fetch):
     global df
-    print(name_to_fetch)
 
     URL = "https://liquipedia.net/pubgmobile/" + name_to_fetch + "/Results"
     page = requests.get(URL)
@@ -52,13 +51,13 @@ def extract_data(name_to_fetch):
                     },
                     ignore_index=True,
                 )
-    df.to_csv("file1.csv")
-    df.to_excel("file1.xlsx")
-    transform("file1.csv")
+    df.to_csv("File_folder/file1.csv")
+    df.to_excel("File_folder/file1.xlsx")
+    transform("File_folder/file1.csv")
 
 
 def main():
-    extract_data("JONATHAN")
+    extract_data("Neyoo")
 
 
 main()
